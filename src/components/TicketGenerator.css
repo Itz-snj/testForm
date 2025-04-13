@@ -1,0 +1,169 @@
+.ticket-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #1a1a1a;
+}
+
+.ticket-form-container {
+  max-width: 450px;
+  width: 100%;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.ticket-header {
+  text-align: center;
+  padding: 2rem 2rem 1.5rem;
+  background-color: white;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #6c47ff;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.ticket-form {
+  padding: 0 2rem 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.form-input, .form-textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  background-color: #111;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.form-input::placeholder, .form-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form-input:focus, .form-textarea:focus {
+  outline: none;
+  border-color: #6c47ff;
+}
+
+.form-textarea {
+  resize: none;
+  min-height: 120px;
+}
+
+.submit-button {
+  width: 100%;
+  background-color: #6c47ff;
+  color: white;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: #5a3cd7;
+}
+
+.success-message, .error-message {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.success-message {
+  background-color: rgba(0, 200, 83, 0.1);
+  border: 1px solid rgba(0, 200, 83, 0.2);
+  color: #00c853;
+}
+
+.error-message {
+  background-color: rgba(244, 67, 54, 0.1);
+  border: 1px solid rgba(244, 67, 54, 0.2);
+  color: #f44336;
+}
+
+.message-content {
+  display: flex;
+  align-items: center;
+}
+
+.message-text {
+  margin-left: 0.5rem;
+}
+
+.message-text p {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.footer {
+  margin-top: 1rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.75rem;
+  padding: 1rem;
+  background-color: #e8eaf6;
+}
+
+/* Add these new styles for the top and bottom sections */
+.form-top-section {
+  background-color: #e8eaf6;
+  padding: 2rem;
+}
+
+.form-bottom-section {
+  background-color: #e8eaf6;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #666;
+}
+
+/* Icon styles for inputs */
+.input-container {
+  position: relative;
+}
+
+.input-icon, .textarea-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.textarea-icon {
+  top: 1rem;
+}
+
+.form-input, .form-textarea {
+  padding-left: 2.5rem;
+}
