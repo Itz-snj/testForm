@@ -19,7 +19,7 @@ const TicketGenerator = () => {
         e.preventDefault();
         
         try {
-            const response = await fetch('http://localhost:3000/ticket/external/add', {
+            const response = await fetch('https://143d-2405-201-8018-e032-ccd7-3711-a21f-d6db.ngrok-free.app/ticket/external/add', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
