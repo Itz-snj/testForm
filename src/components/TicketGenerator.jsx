@@ -19,7 +19,7 @@ const TicketGenerator = () => {
         e.preventDefault();
         
         try {
-            const response = await fetch(' https://supremeduck-helping.ngrok-free.app/ticket/external/add', {
+            const response = await fetch('https://supreme-duck-helping.ngrok-free.app/ticket/external/add', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
