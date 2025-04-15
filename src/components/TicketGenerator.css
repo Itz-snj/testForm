@@ -1,169 +1,137 @@
 .ticket-container {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
-  background-color: #1a1a1a;
-}
-
-.ticket-form-container {
-  max-width: 450px;
-  width: 100%;
-  background-color: white;
-  border-radius: 1rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-}
-
-.ticket-header {
-  text-align: center;
-  padding: 2rem 2rem 1.5rem;
-  background-color: white;
-}
-
-.title {
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: #6c47ff;
-  margin-bottom: 0.5rem;
-}
-
-.subtitle {
-  color: #666;
-  font-size: 0.95rem;
+  padding: 20px;
+  background-color: #111111;
 }
 
 .ticket-form {
-  padding: 0 2rem 2rem;
+  width: 100%;
+  max-width: 500px;
+  background: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.form-header {
+  padding: 40px;
+  background: #222222;
+  text-align: center;
+}
+
+.form-title {
+  font-size: 28px;
+  color: #6366f1;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.form-subtitle {
+  color: #9ca3af;
+  font-size: 16px;
+}
+
+.form-content {
+  padding: 32px 40px;
 }
 
 .form-group {
-  margin-bottom: 1.25rem;
+  margin-bottom: 24px;
 }
 
 .form-label {
   display: block;
-  font-size: 0.85rem;
+  margin-bottom: 8px;
+  font-size: 14px;
   font-weight: 500;
-  color: #333;
-  margin-bottom: 0.5rem;
+  color: #e5e7eb;
 }
 
-.form-input, .form-textarea {
+.form-input,
+.form-textarea {
   width: 100%;
-  padding: 0.75rem 1rem;
-  border: 1px solid #ddd;
-  border-radius: 0.5rem;
-  background-color: #111;
-  color: white;
-  font-size: 0.9rem;
+  padding: 12px 16px;
+  border: 1px solid #333333;
+  border-radius: 8px;
+  background: #222222;
+  color: #ffffff;
+  font-size: 15px;
+  transition: all 0.2s;
 }
 
-.form-input::placeholder, .form-textarea::placeholder {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.form-input:focus, .form-textarea:focus {
+.form-input:focus,
+.form-textarea:focus {
   outline: none;
-  border-color: #6c47ff;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #6b7280;
 }
 
 .form-textarea {
-  resize: none;
   min-height: 120px;
+  resize: vertical;
 }
 
 .submit-button {
   width: 100%;
-  background-color: #6c47ff;
+  padding: 12px;
+  background: #6366f1;
   color: white;
-  padding: 0.75rem;
-  border-radius: 0.5rem;
-  font-weight: 500;
-  font-size: 1rem;
   border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: all 0.2s;
 }
 
 .submit-button:hover {
-  background-color: #5a3cd7;
+  background: #4f46e5;
+  transform: translateY(-1px);
 }
 
-.success-message, .error-message {
-  margin-top: 1rem;
-  padding: 0.75rem;
-  border-radius: 0.5rem;
+.submit-button:active {
+  transform: translateY(1px);
 }
 
-.success-message {
-  background-color: rgba(0, 200, 83, 0.1);
-  border: 1px solid rgba(0, 200, 83, 0.2);
-  color: #00c853;
-}
-
-.error-message {
-  background-color: rgba(244, 67, 54, 0.1);
-  border: 1px solid rgba(244, 67, 54, 0.2);
-  color: #f44336;
-}
-
-.message-content {
+.message {
+  margin-top: 16px;
+  padding: 12px 16px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
+  background: #222222;
 }
 
-.message-text {
-  margin-left: 0.5rem;
+.message.success {
+  border: 1px solid #059669;
+  color: #34d399;
 }
 
-.message-text p {
-  font-size: 0.85rem;
-  font-weight: 500;
+.message.error {
+  border: 1px solid #dc2626;
+  color: #f87171;
 }
 
-.footer {
-  margin-top: 1rem;
+.message-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.form-footer {
+  padding: 16px;
   text-align: center;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 0.75rem;
-  padding: 1rem;
-  background-color: #e8eaf6;
-}
-
-/* Add these new styles for the top and bottom sections */
-.form-top-section {
-  background-color: #e8eaf6;
-  padding: 2rem;
-}
-
-.form-bottom-section {
-  background-color: #e8eaf6;
-  padding: 1rem;
-  text-align: center;
-  font-size: 0.75rem;
-  color: #666;
-}
-
-/* Icon styles for inputs */
-.input-container {
-  position: relative;
-}
-
-.input-icon, .textarea-icon {
-  position: absolute;
-  left: 0.75rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.textarea-icon {
-  top: 1rem;
-}
-
-.form-input, .form-textarea {
-  padding-left: 2.5rem;
+  background: #222222;
+  color: #6b7280;
+  font-size: 14px;
+  border-top: 1px solid #333333;
 }
